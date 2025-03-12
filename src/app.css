@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Comfortaa';
+    display: swap;
+    src: url('/fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
+}
+
+@theme {
+  --font-sans: "Comfortaa", sans-serif;
+  --color-template-bg         : #F7F9FC;
+  --color-template-text       : #2C3E50;
+  --color-template-accent     : #A7C7E7;
+  --color-template-secondary  : #DDE6ED;
+}
