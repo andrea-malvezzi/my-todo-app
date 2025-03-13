@@ -8,8 +8,9 @@
 
 @theme {
   --font-sans: "Comfortaa", sans-serif;
-  --color-template-bg         : #F7F9FC;
-  --color-template-text       : #2C3E50;
-  --color-template-accent     : #A7C7E7;
-  --color-template-secondary  : #DDE6ED;
+  --color-template-bg               : #F7F9FC;
+  --color-template-text             : #2C3E50;
+  --color-template-accent           : #A7C7E7;
+  --color-template-accent-disabled  : #A7C7E780;
+  --color-template-secondary        : #DDE6ED;
 }
