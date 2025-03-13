@@ -4,7 +4,7 @@
     let username : string | undefined = $state();
 </script>
 
-<div class="w-screen h-screen overflow-x-hidden font-Comfortaa flex flex-col justify-center items-center bg-template-bg">
+<div class="w-screen h-screen overflow-hidden font-Comfortaa flex flex-col justify-center items-center bg-template-bg">
     <div class="flex flex-col justify-center items-center w-3/4">
         <Greetings {username} />
         <!-- maybe make this a toast notification with an input to be less intrusive -->
