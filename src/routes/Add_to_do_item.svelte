@@ -6,6 +6,9 @@
     // Callback property that the parent component must provide
     export let onAddToDoItem: (item: Item) => void;
 
+    const maxTitleLength    = 100;
+    const maxContentLength  = 300;
+
     let visibilityFlag = false;
     let newToDoItem : Item = { title: '', content: '', done : false };
 
@@ -24,8 +27,18 @@
 <div class="border-4 mt-2 border-green-200 flex flex-row justify-center rounded-md">
     {#if visibilityFlag}
         <form transition:fade class="flex flex-col justify-center">
-            <input type="text" class="mt-1 border-1 border-gray-400 rounded-sm text-template-text" bind:value={newToDoItem.title} placeholder="Give your to-do a title!">
-            <input type="text" class="mt-1 border-1 border-gray-400 rounded-sm text-template-text" bind:value={newToDoItem.content} placeholder="Add some notes!">
+            <input
+                type="text"
+                class="mt-1 border-1 border-gray-400 rounded-sm text-template-text"
+                bind:value={newToDoItem.title}
+                maxlength={maxTitleLength}
+                placeholder="Give your to-do a title!">
+            <input
+                type="text"
+                class="mt-1 border-1 border-gray-400 rounded-sm text-template-text"
+                bind:value={newToDoItem.content}
+                maxlength={maxContentLength}
+                placeholder="Add some notes!">
             <div class="flex flex-row justify-evenly w-full">
                 <button on:click={showAddItemForm}>
                     <X size={24} color="red" />
