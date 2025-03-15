@@ -33,12 +33,12 @@
                 bind:value={newToDoItem.title}
                 maxlength={maxTitleLength}
                 placeholder="Give your to-do a title!">
-            <input
-                type="text"
+            <textarea
                 class="mt-1 border-1 border-gray-400 rounded-sm text-template-text"
                 bind:value={newToDoItem.content}
                 maxlength={maxContentLength}
-                placeholder="Add some notes!">
+                placeholder="Add some notes!"
+            ></textarea>
             <div class="flex flex-row justify-evenly w-full">
                 <button on:click={showAddItemForm}>
                     <X size={24} color="red" />

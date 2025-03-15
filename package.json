@@ -38,6 +38,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"lucide-svelte": "^0.479.0"
+		"lucide-svelte": "^0.479.0",
+		"marked": "^15.0.7"
 	}
 }
