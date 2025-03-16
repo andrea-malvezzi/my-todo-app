@@ -3,7 +3,8 @@
     import { marked } from 'marked';
 
     // Properties retrieved from To_do_list.svelte passed on component usage
-    let { title, content, done, index, onRemoveToDoItem, onChangeCheckedStatus} : {
+    let { id, title, content, done, index, onRemoveToDoItem, onChangeCheckedStatus} : {
+        id                      : number,
         title                   : string;
         content                 : string;
         done                    : boolean;
@@ -38,7 +39,10 @@
     }
 
 </script>
-<li class="mt-1 bg-template-accent flex flex-row items-center justify-between rounded-md w-full px-2 {done ? 'line-through bg-template-accent-disabled' : ''}">
+<li 
+    id={id.toString()}
+    class="mt-1 bg-template-accent flex flex-row items-center justify-between rounded-md w-full px-2 {done ? 'line-through bg-template-accent-disabled' : ''}"
+>
     <div class="flex flex-col w-full">
         <h2 class="text-lg">{title}</h2>
         <div use:applyMarkdownStyles>{@html marked(content)}</div>

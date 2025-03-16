@@ -10,7 +10,7 @@
     const maxContentLength  = 300;
 
     let visibilityFlag = false;
-    let newToDoItem : Item = { title: '', content: '', done : false };
+    let newToDoItem : Item = { id: 0, title: '', content: '', done : false };
 
     function showAddItemForm(){
         visibilityFlag = !visibilityFlag;
@@ -19,7 +19,7 @@
     function addToDoItem() {
         if (newToDoItem.title && newToDoItem.content){
             onAddToDoItem(newToDoItem);
-            newToDoItem = { title: '', content: '', done : false };
+            newToDoItem = { id: 0, title: '', content: '', done : false };
             visibilityFlag = false;
         }
     }
