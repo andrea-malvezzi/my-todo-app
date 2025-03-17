@@ -14,9 +14,14 @@
     onMount(() => {
         const storedItems = localStorage.getItem('toDoItems');
 
-        if (storedItems)
-            items = JSON.parse(storedItems);
-    })
+        if (storedItems) {
+            items = JSON.parse(storedItems).map((item: any) => ({
+                ...item,
+                id: item.id ?? generateId(),
+            }));
+        }
+        updateLocalStorage();
+    });
 
     function updateLocalStorage() {
         localStorage.setItem('toDoItems', JSON.stringify(items));
